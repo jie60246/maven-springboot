@@ -1,0 +1,14 @@
+#配置数据源
+#其实这个不是spring boot + mybatis的问题， 其实是为了使MySQL JDBC驱动程序的5.1.33版本与UTC时区配合使用，必须在连接字符串中明确指定serverTimezone。
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/springboot_demo?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password: 123
+    driver-class-name: com.mysql.jdbc.Driver
+  thymeleaf:
+    cache: false
+#mybatis
+mybatis:
+  mapper-locations: classpath:com/bbk/dao/*.xml
+  type-aliases-package: com.bbk.entity

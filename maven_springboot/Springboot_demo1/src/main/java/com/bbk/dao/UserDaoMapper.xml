@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bbk.dao.UserDaoMapper" >
+
+    <select id="queryUser"  resultType="com.bbk.entity.User">
+        select u_id as uId ,user_name as userName , user_password as userPassWord ,
+          user_age as userAge , city ,hobby
+          from t_user_springboot
+    </select>
+</mapper>
